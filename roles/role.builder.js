@@ -26,6 +26,10 @@ var roleBuilder = {
                 creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
+    },
+
+    create: function() {
+        
     }
 };
 

@@ -22,6 +22,9 @@ var roleHarvester = {
                 }
             }
         }
+    },
+    create: function() {
+        
     }
 };
 
