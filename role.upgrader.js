@@ -23,6 +23,12 @@ var roleUpgrader = {
                 creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
+    },
+    create: function() {
+        var newName = 'Upgrader' + Game.time;
+        console.log('Spawning new upgrader: ' + newName);
+        Game.spawns[constants.SPAWN1_NAME].spawnCreep([WORK,CARRY,MOVE], newName,
+            {memory: {role: constants.ROLE_UPGRADER}});
     }
 };
 

@@ -24,8 +24,12 @@ var roleHarvester = {
         }
     },
     create: function() {
-        
+        var newName = 'Harvester' + Game.time;
+        console.log('Spawning new harvester: ' + newName);    
+        Game.spawns[constants.SPAWN1_NAME].spawnCreep(BASIC_CREEP, newName,
+            {memory: {role: constants.ROLE_HARVESTER}});
     }
 };
 
+var BASIC_CREEP = [WORK,CARRY,MOVE];
 module.exports = roleHarvester;

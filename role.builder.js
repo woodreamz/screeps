@@ -29,7 +29,10 @@ var roleBuilder = {
     },
 
     create: function() {
-        
+        var newName = 'Builder' + Game.time;
+        console.log('Spawning new builder: ' + newName);
+        Game.spawns[constants.SPAWN1_NAME].spawnCreep([WORK,CARRY,MOVE], newName,
+            {memory: {role: constants.ROLE_BUILDER}});
     }
 };
 
